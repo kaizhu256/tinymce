@@ -11,7 +11,7 @@ import { Obj, Arr } from '@ephox/katamari';
 const patchPipeConfig = (config) => typeof config === 'string' ? config.split(/[ ,]/) : config;
 
 const shouldNeverUseNative = function (editor: Editor): boolean {
-  return editor.settings.contextmenu_never_use_native || false;
+  return editor.settings.contextmenu_never_use_native;
 };
 
 const getMenuItems = (editor: Editor, name: string, defaultItems: string) => {
